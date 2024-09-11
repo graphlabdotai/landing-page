@@ -2,6 +2,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  darkMode: "class", // Enable dark mode
   theme: {
     extend: {
       fontFamily: {
@@ -11,6 +12,12 @@ module.exports = {
           "Inter",
           ...defaultTheme.fontFamily.sans,
         ],
+      },
+      colors: {
+        dark: {
+          bg: "#1a202c",
+          text: "#e2e8f0",
+        },
       },
     },
   },

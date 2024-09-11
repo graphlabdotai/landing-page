@@ -53,6 +53,7 @@ const makeTitle = title
         },
       }}
     />
+    <script src="../components/themeToggle.js"></script>
   </head>
   <body>
     <Navbar />
@@ -64,6 +65,13 @@ const makeTitle = title
       img {
         content-visibility: auto;
       }
+
+      /* Dark mode styles */
+      .dark body {
+        background-color: theme("colors.dark.bg");
+        color: theme("colors.dark.text");
+      }
     </style>
+    <script src="../components/themeToggle.js"></script>
   </body>
 </html>
