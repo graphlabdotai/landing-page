@@ -34,15 +34,12 @@ document.addEventListener("astro:page-load", () => {
 // Run initTheme on initial load
 initTheme();
 
-// Check for saved theme preference or use the system preference
+// Check for saved theme preference or use light as default
 const theme = (() => {
   if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
     return localStorage.getItem("theme");
   }
-  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    return "dark";
-  }
-  return "light";
+  return "light"; // Set light as default
 })();
 
 if (theme === "light") {
